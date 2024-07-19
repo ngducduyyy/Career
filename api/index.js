@@ -1,13 +1,17 @@
 import express from "express"
 import mongoose from "mongoose";
 import dotenv from "dotenv"
-import MiddleWare from "./MiddleWare/MiddleWare";
-import AccountController from "./Controller/AccountController";
-
+import MiddleWare from "./MiddleWare/MiddleWare.js";
+import AccountController from "./Controller/AccountController.js";
+import cors from "cors"
 const app = express()
 app.use(express.json())
 
 dotenv.config()
+
+app.use(cors({
+    crossOrigin: "*"
+}))
 
 const PORT = process.env.PORT
 const DATABASE_NAME = process.env.DATABASE_NAME

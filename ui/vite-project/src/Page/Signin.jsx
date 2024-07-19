@@ -1,8 +1,47 @@
 import React from 'react'
+import {useState} from "react";
+import axios from "axios";
 
 const Signin = () => {
+  const [username, setUsername] = useState("")
+    const [password, setPassword] = useState("")
+    const [fullName, setFullName] = useState("")
+    const changeUsername = (e) =>{
+        setUsername(e.target.value)
+    }
+    const changePassword = (e) =>{
+        setPassword(e.target.value)
+    }
+    const changeFullName = (e) =>{
+        setFullName(e.target.value)
+    }
+    const register = () =>{
+        const data = {
+            username,
+            password,
+            fullName
+        }
+        axios.post("http://localhost:8080/register", data)
+        alert("Success")
+    }
   return (
-    <div>Signin</div>
+    <div className="container">
+            <div className="mt-3 mb-3">
+                <label htmlFor="">Username</label>
+                <input type="text" onChange={changeUsername} className="form-control form-control-sm"/>
+            </div>
+            <div className="mt-3 mb-3">
+                <label htmlFor="">Password</label>
+                <input type="password" className="form-control form-control-sm" onChange={changePassword}/>
+            </div>
+            <div className="mt-3 mb-3">
+                <label htmlFor="">Full Name</label>
+                <input type="text" className="form-control form-control-sm" onChange={changeFullName}/>
+            </div>
+            <div className="mt-3 mb-3">
+                <button type="button" className="btn btn-primary btn-sm" onClick={()=> register()}>Register</button>
+            </div>
+        </div>
   )
 }
 

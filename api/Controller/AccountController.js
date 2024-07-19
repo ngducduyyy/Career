@@ -1,5 +1,5 @@
 import bcrypt, {hashSync} from "bcrypt";
-import AccountModel from "../Model/AccountModel"
+import AccountModel from "../Model/AccountModel.js"
 import dotenv from "dotenv"
 
 dotenv.config()
