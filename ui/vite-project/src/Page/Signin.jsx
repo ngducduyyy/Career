@@ -1,6 +1,7 @@
 import React from 'react'
 import {useState} from "react";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 const Signin = () => {
   const [username, setUsername] = useState("")
@@ -26,6 +27,7 @@ const Signin = () => {
     }
   return (
     <div className="container">
+        <Link to="/"><button type="button" className="btn btn-primary btn-sm">Back</button></Link>
             <div className="mt-3 mb-3">
                 <label htmlFor="">Username</label>
                 <input type="text" onChange={changeUsername} className="form-control form-control-sm"/>
