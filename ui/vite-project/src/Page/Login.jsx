@@ -33,6 +33,10 @@ const Login = () => {
             <div className="mt-3 mb-3">
                 <button type="button" className="btn btn-primary btn-sm" onClick={() => register()}>Login</button>
             </div>
+            <div>
+            <Link to="/forgotpassword"><label htmlFor="">Forgot Password</label></Link>
+            <Link to="/updatepersonalinfo"><label htmlFor="">Updatepersonalinfo</label></Link>
+            </div>
         </div></div>
     )
 }
