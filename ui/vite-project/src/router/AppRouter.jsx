@@ -1,55 +1,25 @@
 import React from 'react'
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import Home from "../Page/Home"
-import Login from '../Page/Login';
-import Signin from '../Page/Signin';
-import ForgotPassword from '../Page/ForgotPassword';
-import ChangePassword from '../Page/ChangePassword';
-import UpdatePersonalInfo from '../Page/UpdatePersonalInfo';
-import Navbar from '../component/Navbar/Navbar';
-import RegisterJob from '../PageJob/RegisterJob';
-const router = createBrowserRouter([
-  {
-      path: "/",
-      element: <Home/>,
+import { Router, Routes, Route } from 'react-router-dom'
+import Signin from '../Page/Signin'
+import Login from '../Page/Login'
+import ForgotPassword from '../Page/ForgotPassword'
+import ChangePassword from '../Page/ChangePassword'
+import UpdatePersonalInfo from '../Page/UpdatePersonalInfo'
+import Home from '../Page/Home'
 
-  },
-  {
-      path: "/login",
-      element: <Login />,
-
-  }, 
-  {
-      path: "/signin",
-      element: <Signin/>,
-
-  },
-  {
-      path: "/forgotpassword",
-      element: <ForgotPassword/>,
-
-  },
-  {
-      path: "/changepassword",
-      element: <ChangePassword/>,
-
-  },
-  {
-      path: "/updatepersonalinfo",
-      element: <UpdatePersonalInfo/>,
-
-  },
-  {
-      path: "/registerjob",
-      element: <RegisterJob/>,
-
-  },
-
-
-])
 const AppRouter = () => {
   return (
-    <RouterProvider router={router} />
+    <div>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/signin" element={<Signin/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/forgotpassword" element={<ForgotPassword/>}/>
+        <Route path="/changepassword" element={<ChangePassword/>}/>
+        <Route path="/updatepersonalinfo" element={<UpdatePersonalInfo/>}/>
+      </Routes>
+
+    </div>
   )
 }
 

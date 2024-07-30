@@ -21,8 +21,8 @@ const Login = () => {
         axios.post("http://localhost:8080/login", data)
     }
     return (
-        <div><div className="container">
-            <Link to="/"><button type="button" className="btn btn-primary btn-sm">Back</button></Link>
+        <div>
+            <div className="container">
             <div className="mt-3 mb-3">
                 <label htmlFor="">Username</label>
                 <input type="text" onChange={changeUsername} className="form-control form-control-sm" />
