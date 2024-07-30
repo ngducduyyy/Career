@@ -72,7 +72,7 @@ const UpdatePersonalInfo = () => {
         </div>
         <div className="form-group mt-3 mb-3">
           <label>Giới tính *</label>
-          <Form.Select class="form-select form-select-sm" aria-label="Small select example">
+          <Form.Select class="form-select form-select-sm" aria-label="Default select example" size='sm'>
       <option value="1">Nam</option>
       <option value="2">Nữ</option>
     </Form.Select>
@@ -92,10 +92,10 @@ const UpdatePersonalInfo = () => {
         <div className="form-group mt-3 mb-3">
           <label>Lĩnh vực hoạt động *</label>
 
-          <Form.Select class="form-select form-select-sm" aria-label="Small select example" multiple value={fieldsOfActivity} onChange={handleFieldsOfActivityChange} required>
+          <Form.Select class="form-select form-select-sm" size='sm' aria-label="Default select example" onChange={handleFieldsOfActivityChange} required>
           {fieldsOfActivityOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
+              <option key={option.value}>
+                <li>{option.label}</li>
               </option>
             ))}
     </Form.Select>

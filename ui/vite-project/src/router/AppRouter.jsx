@@ -6,6 +6,7 @@ import ForgotPassword from '../Page/ForgotPassword'
 import ChangePassword from '../Page/ChangePassword'
 import UpdatePersonalInfo from '../Page/UpdatePersonalInfo'
 import Home from '../Page/Home'
+import UpdateCompanyInfo from '../Page/UpdateCompanyInfo'
 
 const AppRouter = () => {
   return (
@@ -17,6 +18,7 @@ const AppRouter = () => {
         <Route path="/forgotpassword" element={<ForgotPassword/>}/>
         <Route path="/changepassword" element={<ChangePassword/>}/>
         <Route path="/updatepersonalinfo" element={<UpdatePersonalInfo/>}/>
+        <Route path="/updatecompanyinfo" element={<UpdateCompanyInfo/>}/>
       </Routes>
 
     </div>

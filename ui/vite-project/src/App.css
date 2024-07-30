@@ -4,3 +4,6 @@
 .forgot-update {
     text-align: center;
 }
+.navbar-collapse {
+    justify-content: flex-end
+}
