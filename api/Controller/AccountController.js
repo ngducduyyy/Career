@@ -48,6 +48,36 @@ const AccountController = {
             message: "Login success",
             username: username
         })
+    },
+    changePassword: async (req, res) => {
+        const {username, password, newPassword, confirmPassword} = req.body
+        if (!username || !password || !newPassword || !confirmPassword) {
+            return res.status(400).send(
+                {
+                    message:"Ban da nhap sai"
+                }
+            );
+          }
+        
+          if (newPassword !== confirmPassword) {
+            return res.status(400).send({
+                message: "Mat khau khong khop"
+            });
+          }
+        
+          const account  = await AccountModel.findOne({
+            username: username
+        })
+          if (!account) {
+            return res.status(404).send({
+                message: "User not found"
+            });
+          }
+          if (newPassword.length < 8) {
+            return res.status(400).send({
+                message: "Mat khau moi khong duoc it hon 8 ky tu"
+            });
+          }
     }
 }
 

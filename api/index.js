@@ -4,6 +4,7 @@ import dotenv from "dotenv"
 import MiddleWare from "./MiddleWare/MiddleWare.js";
 import AccountController from "./Controller/AccountController.js";
 import cors from "cors"
+import JobController from "./Controller/JobController.js";
 const app = express()
 app.use(express.json())
 
@@ -24,3 +25,9 @@ app.listen(PORT, ()=>{
 //Login-Signin
 app.post("/login", MiddleWare.login, AccountController.login)
 app.post("/register", MiddleWare.registerAccount, AccountController.registerAccount)
+
+//Job
+app.post("/registerjob", MiddleWare.registerJob, JobController.registerJob )
+
+//Password
+app.post("/changepassword",AccountController.changePassword)

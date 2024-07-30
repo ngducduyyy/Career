@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 
@@ -33,37 +34,44 @@ const ChangePassword = () => {
       setError('New password does not meet the requirements');
       return;
     }
-    // Call API to change password
-    console.log('Change password API call');
-  };
+  }
+    const changePass = () =>{
+      const data = {
+          username,
+          newPassword
+      }
+      axios.post("http://localhost:8080/changepassword", data)
+      alert("Change password success")
+    }
+  
 
   const validatePassword = (password) => {
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     return passwordRegex.test(password);
-  };
+  }
 
   return (
     <div>
       <h1>Change Password</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group mt-3 mb-3">
-          <label>Mật khẩu cũ *</label>
+          <label>Old password *</label>
           <input className="form-control form-control-sm" type="password" value={oldPassword} onChange={handleOldPasswordChange} required />
         </div>
         <div className="form-group mt-3 mb-3">
-          <label>Mật khẩu mới *</label>
+          <label>New password *</label>
           <input className="form-control form-control-sm" type="password" value={newPassword} onChange={handleNewPasswordChange} required />
           <small>(Tối thiểu 8 ký tự, tối thiểu 1 chữ số, 1 ký tự đặc biệt, 1 chữ hoa, 1 chữ thường)</small>
         </div>
         <div className="form-group mt-3 mb-3">
-          <label>Xác nhận mật khẩu *</label>
+          <label>Confirm password *</label>
           <input className="form-control form-control-sm" type="password" value={confirmPassword} onChange={handleConfirmPasswordChange} required />
         </div>
         {error && <div className="error">{error}</div>}
-        <button className="btn btn-primary btn-sm" type="submit">Change Password</button>
+        <button className="btn btn-primary btn-sm" type="submit" onClick={()=> changePass()}>Change Password</button>
       </form>
     </div>
   );
-};
+  };
 
 export default ChangePassword;

@@ -27,6 +27,21 @@ const MiddleWare = {
             })
         }
     },
+    registerJob: (req, res, next) =>{
+        try{
+            const {job, earning, location, companyName} = req.body
+            if (!job) throw new Error("Job must be not empty!")
+            if (!earning) throw new Error("Earning must be not empty!")
+            if (!location) throw new Error("Location must be not empty!")
+            if (!companyName) throw new Error("Company name must be not empty!")
+
+            next()
+        } catch (err){
+            res.status(400).send({
+                message: err.message
+            })
+        }
+    },
 };
 
 export default MiddleWare

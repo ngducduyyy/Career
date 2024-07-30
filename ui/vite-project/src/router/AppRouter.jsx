@@ -6,7 +6,8 @@ import Signin from '../Page/Signin';
 import ForgotPassword from '../Page/ForgotPassword';
 import ChangePassword from '../Page/ChangePassword';
 import UpdatePersonalInfo from '../Page/UpdatePersonalInfo';
-
+import Navbar from '../component/Navbar/Navbar';
+import RegisterJob from '../PageJob/RegisterJob';
 const router = createBrowserRouter([
   {
       path: "/",
@@ -38,6 +39,12 @@ const router = createBrowserRouter([
       element: <UpdatePersonalInfo/>,
 
   },
+  {
+      path: "/registerjob",
+      element: <RegisterJob/>,
+
+  },
+
 
 ])
 const AppRouter = () => {
