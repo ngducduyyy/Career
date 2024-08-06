@@ -19,3 +19,11 @@
 .btn-primary:hover{
     background-color: #45a049;
 }
+.a {
+    width: 30%;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 20px;
+   
+}
