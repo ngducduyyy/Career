@@ -28,6 +28,7 @@ app.post("/register", MiddleWare.registerAccount, AccountController.registerAcco
 
 //Job
 app.post("/registerjob", MiddleWare.registerJob, JobController.registerJob )
+app.get("/job", JobController.getAllJobs)
 
 //Password
 app.post("/changepassword",AccountController.changePassword)

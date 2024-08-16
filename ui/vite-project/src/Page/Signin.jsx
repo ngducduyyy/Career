@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from "react";
 import axios from "axios";
-import { Link } from 'react-router-dom';
 import './Signin.css'
 const Signin = () => {
     const [username, setUsername] = useState("")
@@ -28,6 +27,7 @@ const Signin = () => {
             fullName
         }
         axios.post("http://localhost:8080/register", data)
+        alert("Success")
 
     }
     return (

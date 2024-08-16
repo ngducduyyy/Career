@@ -4,7 +4,12 @@ const obj = {
     job: String,
     earning: Number,
     location: String,
-    companyName: String
+    companyName: String,
+    profession: String,
+    position: String,
+    description: String,
+    numberPeople: Number,
+    date: String
 }
 
 const JobSchema = new mongoose.Schema(obj);
