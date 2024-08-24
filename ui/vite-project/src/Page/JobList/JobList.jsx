@@ -23,9 +23,9 @@ const JobList = (props) => {
         const fetchData = async () => {
             let result = null;
             if (currentPage2 != null) {
-                result = await axios.get("http://localhost:8080/job?currentPage=" + currentPage2);
+                result = await axios.get("http://localhost:8080/joblist?currentPage=" + currentPage2);
             } else {
-                result = await axios.get("http://localhost:8080/job");
+                result = await axios.get("http://localhost:8080/joblist");
             }
 
             console.log("result")
@@ -46,18 +46,18 @@ const JobList = (props) => {
 
     const next = () => {
         let nextPage = currentPage + 1;
-        window.location.href = "http://localhost:5173/jobList?currentPage=" + nextPage;
+        window.location.href = "http://localhost:5173/joblist?currentPage=" + nextPage;
     }
     const previous = () => {
         let prePage = currentPage - 1;
-        window.location.href = "http://localhost:5173/jobList?currentPage=" + prePage;
+        window.location.href = "http://localhost:5173/joblist?currentPage=" + prePage;
     }
 
     return (
         <div className="container">
             <div>
                 <nav id="nav-bar" className="navbar navbar-expand-lg bg-body-tertiary">
-                    <h4>Movies</h4>
+                    <h4>Job</h4>
                 </nav>
                 <div className="list-group">
                     {
@@ -87,6 +87,7 @@ const JobList = (props) => {
             </div>
             <ul className="pagination pagination-sm">
                 <li className="page-item"><button className="page-link" onClick={() => previous()}>Previous</button></li>
+                <li className="page-item"><a className="page-link" href="#">{currentPage}</a></li>
                 <li className="page-item"><button className="page-link" onClick={() => next()}>Next</button></li>
             </ul>
         </div>
