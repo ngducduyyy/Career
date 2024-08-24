@@ -2,7 +2,7 @@ import JobModel from "../Model/JobModel.js";
 
 const JobController = {
     registerJob: async (req, res) => {
-        const { job, earning, location, companyName, date, position, description, profession, numberPeople } = req.body;
+        const { job, earning, location, companyName, date, position, description, profession, numberPeople, companyImg } = req.body;
         const newJob = await JobModel.create({
             job: job,
             earning: earning,
@@ -12,7 +12,8 @@ const JobController = {
             description: description,
             numberPeople: numberPeople,
             date: date,
-            profession: profession
+            profession: profession,
+            companyImg: companyImg
         }
         )
         res.send({

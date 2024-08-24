@@ -9,7 +9,8 @@ const obj = {
     position: String,
     description: String,
     numberPeople: Number,
-    date: String
+    date: String,
+    companyImg: String
 }
 
 const JobSchema = new mongoose.Schema(obj);
