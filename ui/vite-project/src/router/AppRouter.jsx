@@ -32,6 +32,7 @@ const AppRouter = () => {
         <Route path="/postjob" element={<PostJob/>}/>
         <Route path="/joblist" element={<JobList/>}/>
         <Route path="/updatejob" element={<UpdateJob/>}/>
+        <Route path="/jobdetails" element={<JobDetails/>}/>
 
       </Routes>
 

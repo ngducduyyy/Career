@@ -1,17 +1,17 @@
 import React from 'react';
 
-const JobDetail = ({ job }) => {
+const JobDetail = () => {
   return (
     <div>
-      <h2>{job.title}</h2>
-      <p>Ngày đăng tin: {job.postedDate}</p>
-      <p>Hạn ứng tuyển: {job.deadline}</p>
-      <p>Lĩnh vực tuyển dụng: {job.field}</p>
-      <p>Mức lương: {job.salary}</p>
-      <p>Địa điểm làm việc: {job.location}</p>
-      <p>Vị trí việc làm: {job.position}</p>
-      <p>Số lượng ứng viên: {job.applicantCount}</p>
-      <p>Mô tả: {job.description}</p>
+      <h2>a</h2>
+      <p>Ngày đăng tin: a</p>
+      <p>Hạn ứng tuyển: a</p>
+      <p>Lĩnh vực tuyển dụng: a</p>
+      <p>Mức lương: a</p>
+      <p>Địa điểm làm việc: a</p>
+      <p>Vị trí việc làm: a</p>
+      <p>Số lượng ứng viên: a</p>
+      <p>Mô tả: a</p>
     </div>
   );
 };
