@@ -56,7 +56,7 @@ console.log(currentPage)
                         listJob.map((value, i) => {
                             return (
                                 <div className="container-list" key={i}>
-                                    <Link to={`/jobdetail/${value.id}`} key={value.id}>
+                                    <Link to={`/jobdetails/${value._id}`} key={value.id}>
                                     <div className="list-job">
                                     <div className="title-job">
                                     <img src={value.companyImg} alt="" />

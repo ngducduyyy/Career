@@ -22,7 +22,6 @@ const Navbarheader = () => {
               <NavDropdown className='dd' title="Chức năng" id="basic-nav-dropdown">
               <NavDropdown.Item href="/updatepersonalinfo">Update Personal Info</NavDropdown.Item>
               <NavDropdown.Item href="/updatecompanyinfo">Update Company Info</NavDropdown.Item>
-              <NavDropdown.Item href="/jobdetails">Job Details</NavDropdown.Item>
               <NavDropdown.Item href="/job">Job</NavDropdown.Item>
               <NavDropdown.Item href="/postjob">Post Job</NavDropdown.Item>
               <NavDropdown.Item href="/updatejob">Update Job</NavDropdown.Item>

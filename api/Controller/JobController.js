@@ -1,4 +1,5 @@
 import JobModel from "../Model/JobModel.js";
+import {Types} from "mongoose"
 
 const JobController = {
     registerJob: async (req, res) => {
@@ -43,6 +44,16 @@ const JobController = {
             job,
             currentPage: currentPageNum
         })
+    },
+    findJob: async (req, res) => {
+        const {id} = req.params
+        console.log("id");
+        console.log(id);
+        const job = await JobModel.findOne({_id:new Types.ObjectId(id)})
+        console.log(job);
+        res.send(
+            job
+        )
     }
 }
 export default JobController

@@ -32,7 +32,7 @@ const AppRouter = () => {
         <Route path="/postjob" element={<PostJob/>}/>
         <Route path="/joblist" element={<JobList/>}/>
         <Route path="/updatejob" element={<UpdateJob/>}/>
-        <Route path="/jobdetails" element={<JobDetails/>}/>
+        <Route path="/jobdetails/:id" element={<JobDetails/>}/>
 
       </Routes>
 
