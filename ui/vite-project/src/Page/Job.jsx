@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './Job.css'
-
+import JobList from "./JobList/JobList";
 function Job() {
   const [position, setPosition] = useState("");
   const [location, setLocation] = useState("Tất cả tỉnh/thành");
@@ -24,7 +24,7 @@ function Job() {
 
 
 
-    
+
   return (
     <div className="container">
       <div className="header">
@@ -46,7 +46,7 @@ function Job() {
           />
           <div className="dropdown-container">
             <div className="dropdown">
-              <span className="dropdown-label" onClick={() => {}}>
+              <span className="dropdown-label" onClick={() => { }}>
                 <svg
                   width="14"
                   height="14"
@@ -96,7 +96,7 @@ function Job() {
           </div>
           <div className="dropdown-container">
             <div className="dropdown">
-              <span className="dropdown-label" onClick={() => {}}>
+              <span className="dropdown-label" onClick={() => { }}>
                 <svg
                   width="14"
                   height="14"
@@ -145,7 +145,7 @@ function Job() {
             </div>
           </div>
           <button type="submit" className="search-button">
-          <i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm
+            <i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm
           </button>
         </div>
       </form>
@@ -165,13 +165,13 @@ function Job() {
           <span className="value">19:31 06/08/2024</span>
         </div>
       </div>
+      <JobList></JobList>
 
-    {/* việc làm tốt nhất */}
-    
+
 
     </div>
 
-    
+
   );
 };
 

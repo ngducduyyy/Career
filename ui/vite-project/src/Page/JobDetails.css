@@ -1,5 +1,8 @@
 .title-detail {
-  border: 1px solid black;
+  border: 1px solid white;
+  box-shadow: 0px 0px 12px 3px rgba(165,156,156,0.49);
+  -webkit-box-shadow: 0px 0px 12px 3px rgba(165,156,156,0.49);
+  -moz-box-shadow: 0px 0px 12px 3px rgba(165,156,156,0.49);
   width: 800px;
   height: 250px;
   border-radius: 10px;
@@ -19,9 +22,22 @@
 }
 
 .btn-plane {
-  width: 500px;
+  padding: 5px;
+  margin-top: 10px;
+  width: 600px;
+  border: none;
+  background-color: #00b14f;
+  color: white;
 }
 
+.btn-like{
+  padding: 5px;
+  margin-top: 10px;
+  width: 100px;
+  border-color: #00b14f;
+  background-color: white;
+  color: #00b14f;
+}
 .title-container {
   width: 600px;
   display: flex;
@@ -35,7 +51,10 @@
 }
 
 .info-container {
-  border: 1px solid black;
+  border: 1px solid white;
+  box-shadow: 0px 0px 12px 3px rgba(165,156,156,0.49);
+  -webkit-box-shadow: 0px 0px 12px 3px rgba(165,156,156,0.49);
+  -moz-box-shadow: 0px 0px 12px 3px rgba(165,156,156,0.49);
   width: 300px;
   height: 250px;
   border-radius: 10px;
@@ -58,7 +77,7 @@
 .company-info {
   display: flex;
   margin: 10px;
-
+  align-items: center;
 }
 
 .company-info img {
@@ -75,7 +94,10 @@
 }
 
 .detail {
-  border: 1px solid black;
+  border: 1px solid white;
+  box-shadow: 0px 0px 12px 3px rgba(165,156,156,0.49);
+  -webkit-box-shadow: 0px 0px 12px 3px rgba(165,156,156,0.49);
+  -moz-box-shadow: 0px 0px 12px 3px rgba(165,156,156,0.49);
   width: 800px;
   border-radius: 10px;
   margin: 20px;
@@ -89,7 +111,10 @@
 }
 
 .more-info {
-  border: 1px solid black;
+  border: 1px solid rgb(255, 251, 251);
+  box-shadow: 0px 0px 12px 3px rgba(165,156,156,0.49);
+-webkit-box-shadow: 0px 0px 12px 3px rgba(165,156,156,0.49);
+-moz-box-shadow: 0px 0px 12px 3px rgba(165,156,156,0.49);
   border-radius: 10px;
   width: 300px;
   height: 200px;
@@ -101,4 +126,16 @@
 .bot-detail {
   display: flex;
   justify-content: center
+}
+.btn-detail{
+display: flex;
+justify-content: center;
+align-items: baseline;
+}
+.company-info h4{
+  margin-left: 10px;
+}
+.detail p {
+  margin-right: 20px;
+  text-align: left;
 }

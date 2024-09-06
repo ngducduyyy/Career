@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 import Form from 'react-bootstrap/Form';
 import JobList from './JobList/JobList';
-
+import SliceCompany from './SliceHome/SliceCompany';
+import SliceJob from './SliceHome/SliceJob';
 const Home = () => {
   const [jobs, setJobs] = useState([]);
   const [filter, setFilter] = useState('all');
@@ -88,22 +89,12 @@ const Home = () => {
             </div>
           </div>
         </section>
-
+<SliceJob/>
         {/* việc làm tốt nhất */}
 
         <section className="jobs">
           <div className="container">
-            <h2 className='jtitle'>Việc làm tốt nhất</h2>
-            <div className="jobs-filter">
-              <Form.Select class="form-select form-select-sm" aria-label="Default select example" size='sm' value={filter} onChange={handleFilterChange}>
-              <option value="all">Tất cả</option>
-                <option value="ngau-nhien">Ngẫu nhiên</option>
-                <option value="ha-noi">Hà Nội</option>
-                <option value="ho-chi-minh">TP Hồ Chí Minh</option>
-                <option value="mien-bac">Miền Bắc</option>
-                <option value="mien-nam">Miền Nam</option>
-    </Form.Select>
-            </div>
+          <Link to="/alljob"><h2 className='jtitle'>Việc làm tốt nhất</h2></Link>
             <div className="jobs-list">
               <JobList/>
             </div>
@@ -112,24 +103,10 @@ const Home = () => {
         
         {/* top công ty hàng đầu */}
         <section>
-        <div className="app2">
-          <div className="container2">
-            <h1 className='name'>Top Công ty hàng đầu</h1>
-            <div className="companies">
-            {companies.map((company) => (
-              <div key={company.name} className="company">
-                <div className="rank">{company.rank}</div>
-                <img src={company.logo} alt={company.name} className="logo" />
-                <div className="cpname">{company.name}</div>
-              </div>
-          ))}
-            </div>
-            <div className="controls">
-              <button className="control left">&lt;</button>
-              <button className="control right">&gt;</button>
-            </div>
-          </div>
-        </div>
+       <div className="container">
+       <h2 className='jtitle'>Công ty nổi bật</h2>
+       <SliceCompany/>
+       </div>
         </section>
 
         {/* top ngành nghề nổi bật */}
@@ -155,7 +132,7 @@ const Home = () => {
 
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2023 TopCV. All rights reserved.</p>
+          <p>&copy; 2024 DuyCareer</p>
         </div>
       </footer>
     </div>

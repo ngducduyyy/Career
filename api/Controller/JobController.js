@@ -23,26 +23,10 @@ const JobController = {
         })
     },
     getAllJobs: async (req, res) => {
-        let {currentPage, size} = req.query
-        if (!currentPage){
-            currentPage = process.env.CURRENT_PAGE
-        }
-        if (!size){
-            size = process.env.SIZE
-        }
-        const currentPageNum = Number(currentPage)
-
-        const totalSize = await JobModel.countDocuments()
-        const totalPage = Math.ceil(totalSize/size)
-        const skip = (currentPageNum -1) * size
-
         const job = await JobModel.find()
-            .skip(skip)
-            .limit(size);
 
         res.status(200).send({
-            job,
-            currentPage: currentPageNum
+            job
         })
     },
     findJob: async (req, res) => {

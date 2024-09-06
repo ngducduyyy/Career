@@ -10,8 +10,12 @@ import UpdateCompanyInfo from '../Page/UpdateCompanyInfo'
 import JobDetails from '../Page/JobDetails'
 import Job from '../Page/Job'
 import PostJob from '../Page/PostJob'
-import UpdateJob from '../Page/UpdateJob'
 import JobList from '../Page/JobList/JobList'
+import CommpanyInfo from '../Page/CommpanyInfo.jsx'
+import PersonInfo from '../Page/PersonInfo'
+import SliceCompany from '../Page/SliceHome/SliceCompany.jsx'
+import SliceJob from '../Page/SliceHome/SliceJob.jsx'
+import AllJob from '../Page/AllJob/AllJob.jsx'
 
 
 
@@ -31,8 +35,12 @@ const AppRouter = () => {
         <Route path="/job" element={<Job/>}/>
         <Route path="/postjob" element={<PostJob/>}/>
         <Route path="/joblist" element={<JobList/>}/>
-        <Route path="/updatejob" element={<UpdateJob/>}/>
         <Route path="/jobdetails/:id" element={<JobDetails/>}/>
+        <Route path="/companyinfo" element={<CommpanyInfo/>}/>
+        <Route path="/personinfo" element={<PersonInfo/>}/>
+        <Route path="/slicehome" element={<SliceCompany/>}/>
+        <Route path="/slicejob" element={<SliceJob/>}/>
+        <Route path="/alljob" element={<AllJob/>}/>
 
       </Routes>
 

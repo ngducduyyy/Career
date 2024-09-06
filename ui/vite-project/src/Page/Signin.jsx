@@ -31,7 +31,8 @@ const Signin = () => {
 
     }
     return (
-        <div className="a">
+       <div className='all-container'>
+         <div className="a">
             <div className="mt-3 mb-3">
                 <label htmlFor="">Username</label>
                 <input type="text" onChange={changeUsername} className="form-control form-control-sm" />
@@ -52,6 +53,7 @@ const Signin = () => {
                 <button type="button" className="btn btn-primary btn-sm" onClick={() => register()}>Register</button>
             </div>
         </div>
+       </div>
     )
 }
 

@@ -22,7 +22,8 @@ const Login = () => {
         axios.post("http://localhost:8080/login", data)
     }
     return (
-        <div className='a'>
+       <div className="all-container">
+         <div className='a'>
             <div className="">
                 <div className="mt-3 mb-3">
                     <label htmlFor="">Username</label>
@@ -42,6 +43,7 @@ const Login = () => {
                 </div>
             </div>        
         </div>    
+       </div>
         
     )
 }

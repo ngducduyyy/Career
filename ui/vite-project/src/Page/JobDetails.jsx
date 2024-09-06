@@ -32,8 +32,10 @@ const JobDetail = () => {
             <div className='date'>
               <p><i class="fa-solid fa-clock"></i> Hạn ứng tuyển: {data?.date}</p>
             </div>
+            <div className='btn-detail'>
             <button className='btn-plane'><i class="fa-regular fa-paper-plane"></i> Ứng tuyển ngay</button>
-            <button><i class="fa-regular fa-heart"></i> Lưu tin</button>
+            <button className='btn-like'><i class="fa-regular fa-heart"></i> Lưu tin</button>
+            </div>
           </div>
           <div className='info-container'>
             <div className='company-info'>
